@@ -13,7 +13,44 @@ class {{name}}ServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        
+        /**
+        
+        //  Here we have some boilerplate code for standard Laravel stuff.
+        //  More info and options: https://laravel.com/docs/5.6/packages
+        
+        // Publish a config.
+        $this->publishes([
+            __DIR__.'/path/to/config/{{name}}.php' => config_path('{{name}}.php'),
+        ]);
+        
+        // Routes.
+        $this->loadRoutesFrom(__DIR__.'/routes.php');
+        
+        // Migrations.
+        $this->loadMigrationsFrom(__DIR__.'/path/to/migrations');
+        
+        // Views.
+        $this->loadViewsFrom(__DIR__.'/path/to/views', '{{name}}');
+        $this->publishes([
+            __DIR__.'/path/to/views' => resource_path('views/vendor/{{name}}'),
+        ]);
+        
+        // CLI commands.
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                FooCommand::class,
+                BarCommand::class,
+            ]);
+        }
+        
+        // Public Assets (css, js, etc.)
+        $this->publishes([
+            __DIR__.'/path/to/assets' => public_path('vendor/{{name}}'),
+        ], 'public');
+        
+        */
+           
     }
 
     /**
