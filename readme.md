@@ -6,7 +6,7 @@
 
 This package provides you with a simple tool to set up a new package and it will let you focus on the development of the package instead of the boilerplate.
 
-This fork contains some updated boilerplate to support common Laravel scenarios, and instead of using the league/skeleton as it's model, it uses the imonroe/skeleton fork instead.  Updated features include Laravel 5.5+ autodiscovery, common additions to the boot() method of the generated ServiceProvider class.
+This fork contains some updated boilerplate to support common Laravel scenarios, and instead of using the league/skeleton as its model, it uses the imonroe/skeleton fork instead.  Updated features include Laravel 5.5+ autodiscovery, common additions to the boot() method of the generated ServiceProvider class.
 
 ## Installation
 
