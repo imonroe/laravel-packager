@@ -6,12 +6,23 @@
 
 This package provides you with a simple tool to set up a new package and it will let you focus on the development of the package instead of the boilerplate.
 
+This fork contains some updated boilerplate to support common Laravel scenarios, and instead of using the league/skeleton as it's model, it uses the imonroe/skeleton fork instead.  Updated features include Laravel 5.5+ autodiscovery, common additions to the boot() method of the generated ServiceProvider class.
+
 ## Installation
 
 Via Composer
 
+Edit your composer.json to point to this repo instead of the Jeroen-G version.  In the "repositories" key, add:
 ```bash
-$ composer require jeroen-g/laravel-packager
+ {
+    "type": "vcs",
+    "url": "https://github.com/imonroe/laravel-packager.git"
+ }
+```
+
+
+```bash
+$ composer require imonroe/laravel-packager
 ```
 
 If you do not run Laravel 5.5 (or higher), then add the service provider in `config/app.php`:
