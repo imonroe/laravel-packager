@@ -67,7 +67,7 @@ class PackagerNewCommand extends Command
         }
         $path = getcwd().'/packages/';
         $fullPath = $path.$vendor.'/'.$name;
-        $requireSupport = '"illuminate/support": "~5.1",
+        $requireSupport = '"illuminate/support": "~5.5",
         "php"';
         $requirement = '"psr-4": {
             "'.$vendor.'\\\\'.$name.'\\\\": "packages/'.$vendor.'/'.$name.'/src",';
@@ -92,7 +92,7 @@ class PackagerNewCommand extends Command
 
         // Get the skeleton repo from the PHP League
         $this->info('Downloading skeleton...');
-            $this->helper->download($zipFile = $this->helper->makeFilename(), 'http://github.com/thephpleague/skeleton/archive/master.zip')
+            $this->helper->download($zipFile = $this->helper->makeFilename(), 'http://github.com/imonroe/skeleton/archive/master.zip')
                  ->extract($zipFile, $path.$vendor)
                  ->cleanUp($zipFile);
             rename($path.$vendor.'/skeleton-master', $fullPath);
